@@ -10,18 +10,20 @@ import {
  } from './shared/services';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderModule } from './header/header.module';
+import { JobDashboardModule } from './job-dashboard/job-dashboard.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HeaderModule,
+    JobDashboardModule
   ],
   providers: [
     StateManagerService,

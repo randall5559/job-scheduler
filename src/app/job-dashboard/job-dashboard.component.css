@@ -1,0 +1,14 @@
+main {
+    margin: auto;
+    width: auto;
+    max-width: 1000px;
+    padding: 0 10px;
+}
+
+.js-full-width {
+    width: 100%;
+}
+
+.large {
+    font-size: 60px;
+}
