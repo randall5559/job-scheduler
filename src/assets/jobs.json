@@ -1,0 +1,12 @@
+{
+    "jobs" : [
+        {
+            "name": "test",
+            "container_size": 1,
+            "frequency": 1,
+            "last_run": "",
+            "next_due": "",
+            "command": ""
+        }
+    ]
+}
