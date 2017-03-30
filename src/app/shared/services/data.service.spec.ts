@@ -52,7 +52,6 @@ describe('DataService', () => {
      },
      MockType.Response,
      (connection) => {
-       console.log(connection);
        expect(connection.request.url)
          .toEqual(url);
      }

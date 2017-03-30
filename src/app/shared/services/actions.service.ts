@@ -5,4 +5,9 @@ export class ActionsService {
 
   constructor() { }
 
+
+  public parseOutJobsData() {
+    
+  }
+
 }

@@ -6,15 +6,22 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class DataService {
 
-  constructor(
-    private Http: Http) { }
+
+  /**
+   * Creates an instance of DataService.
+   *
+   * @param {Http} Http
+   *
+   * @memberOf DataService
+   */
+  constructor(private Http: Http) { }
 
 
   /**
    *
-   * 
+   *
    * @returns {Observable<any>}
-   * 
+   *
    * @memberOf DataService
    */
   public getJobsData(): Observable<any> {
