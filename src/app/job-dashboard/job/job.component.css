@@ -1,0 +1,27 @@
+.js-wrapper {
+    width: 95% !important;
+}
+
+.js-border {
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: thin solid #bdbdbd;
+}
+
+.js-top-margin {
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
+.js-grey-lighten-2 {
+    border: #e0e0e0 thin solid;
+}
+
+.js-btn-section {
+    margin-right: 10px;
+}
+
+.js-btn-section a {
+    margin: 5px;
+}

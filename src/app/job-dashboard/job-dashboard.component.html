@@ -1,5 +1,7 @@
 <main>
-  <div class="row">
+
+  <!-- intro panel section -->
+  <div *ngIf="hasJobs" class="row">
     <div class="col s12">
       <div class="card grey lighten-5">
         <div class="card-content black-text">
@@ -10,10 +12,15 @@
       </div>
     </div>
   </div>
-  <div class="row"></div>
+
+  <!-- jobs section -->
+  <div class="row">
+    <js-job *ngFor="let job of jobs; let i = index" [job]="job" (delete)="removeJob(i)"></js-job>
+  </div>
+
   <div class="row">
     <div class="col s12 center-align ">
-      <a class="js-full-width waves-effect waves-light btn-large deep-purple darken-1">Add Job</a>
+      <a class="js-full-width waves-effect waves-light btn-large deep-purple darken-1" (click)="addJob()">Add Job</a>
     </div>
   </div>
 </main>

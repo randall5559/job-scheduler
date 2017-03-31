@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+select {
+    display: block !important;
+}
+
+input, input:focus {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.row {
+    margin-bottom: 10px !important;
+}
+
+.active {
+    color: #5e35b1 !important;
+}
+
+.disabled {
+    color: #e0e0e0 !important;
+}
