@@ -16,12 +16,12 @@ describe('DataService', () => {
         MockBackend,
         BaseRequestOptions,
         {
-         provide: Http,
-         useFactory: (_mockBackend, _options) => {
-           return new Http(_mockBackend, _options);
-         },
-         deps: [MockBackend, BaseRequestOptions]
-       }
+          provide: Http,
+          useFactory: (_mockBackend, _options) => {
+            return new Http(_mockBackend, _options);
+          },
+          deps: [MockBackend, BaseRequestOptions]
+        }
       ]
     });
   });

@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col s12 js-border">
+
+
+    <!-- Job name -->
+    <div class="input-field col s12">
+      <h6 *ngIf="!isEditMode">{{job.name}}</h6>
+      <input *ngIf="isEditMode" type="text" value="{{job.name}}" class="deep-purple-text text-darken-1" (keyup)="updateName($event)">
+    </div>
+    <hr class="js-grey-lighten-2" />
+
+
+    <!-- Job execution command -->
+    <div class="input-field col s12">
+      <i class="material-icons prefix js-top-margin disabled">attach_money</i>
+      <input type="text" placeholder="npm something" value="{{job.command}}" [ngClass]="{ 'deep-purple-text text-darken-1' : isEditMode }" [disabled]="!isEditMode">
+    </div>
+    <hr class="js-grey-lighten-2" />
+
+
+    <!-- Job options -->
+    <div class="row section">
+      <div class="col s3">
+        <!-- container size job stacks -->
+        <label for="container_size">CONTAINER SIZE</label>
+        <select id="container_size" [disabled]="!isEditMode">
+          <option *ngFor="let size of containerSizes; let i = index;" value="{{i}}" [selected]="size.selected">{{size.name}}</option>
+        </select>
+      </div>
+      <div class="col s3">
+         <!-- container size job stacks -->
+        <label for="container_size">FREQUENCY</label>
+        <select id="container_size" [disabled]="!isEditMode">
+          <option *ngFor="let fre of frequency; let i = index;" value="{{i}}" [selected]="fre.selected">{{fre.name}}</option>
+        </select>
+      </div>
+      <div class="col s3">
+        <label for="container_size">LAST RUN</label>
+        <h6>{{lastRun}}</h6>
+      </div>
+      <div class="col s3">
+        <label for="container_size">NEXT RUN</label>
+        <h6>{{jobDate | date}}</h6>
+        <select [disabled]="!isEditMode">
+          <option *ngFor="let time of militaryTimes" value="{{time}}">{{time}} UTC</option>
+        </select>
+      </div>
+    </div>
+    <hr class="js-grey-lighten-2" />
+
+
+    <!-- Job save, edit, remove -->
+    <div class="section right-align">
+      <div class="js-btn-section" *ngIf="!isEditMode">
+        <a class="waves-effect waves-light btn deep-purple darken-1" (click)="activateEditMode()">Edit</a>
+        <a class="waves-effect waves-light" (click)="removeJob()">Remove</a>
+      </div>
+      <div class="js-btn-section" *ngIf="isEditMode">
+        <a class="waves-effect waves-light btn deep-purple darken-1" (click)="activateEditMode()">Save</a>
+        <a class="waves-effect waves-light" (click)="activateEditMode()">Cancel</a>
+      </div>
+    </div>
+  </div>
+</div>
