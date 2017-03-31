@@ -18,7 +18,7 @@ export class DataService {
 
 
   /**
-   *
+   * Retrieve the jobs data
    *
    * @returns {Observable<any>}
    *
