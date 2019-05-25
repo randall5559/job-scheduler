@@ -1,0 +1,12 @@
+{
+    "jobs" : [
+        {
+            "name": "NPM job",
+            "container_size": 1,
+            "frequency": 2,
+            "last_run": "Aug 12th 2015",
+            "next_due": "April 30th 2017",
+            "command": "npm install"
+        }
+    ]
+}
